@@ -13,3 +13,8 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+/* flashes */
+.flashes h4 {
+    line-height: 2;
+}
