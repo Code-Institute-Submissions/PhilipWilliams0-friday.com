@@ -15,13 +15,13 @@ friday.com is a site where users can log tasks for completion with full CRUD fun
 
         1. As a First Time Visitor, I want to know about the site. 
         2. As a First Time Visitor, I want to easily create an account. 
-        3. As a First Time Visitor, I want to be able to log an expense claim.
+        3. As a First Time Visitor, I want to be able to log a task.
 
     -   #### Returning Visitor Goals
 
-        1. As a Returning Visitor, I want to find information about my logged expense.
+        1. As a Returning Visitor, I want to find information about my task.
         2. As a Returning Visitor, I want to be able to contact site owner. 
-        3. As a Returning Visitor, I want to be able to edit and delete an expense. 
+        3. As a Returning Visitor, I want to be able to edit and delete an task. 
 
 
     -   #### Frequent User Goals
@@ -53,21 +53,25 @@ friday.com is a site where users can log tasks for completion with full CRUD fun
                     "last_name": String
                     "username": String
                     "password": String
-                    "admin": Boolean
-                    "super_admin": Boolean
-                    "active": Boolean
                 }
 
-        - Expense
+        - status
+
+                {   
+                    "_id": ObjectId
+                    "status": String
+                }
+
+        - projects
 
                 {
                     "_id": ObjectId
                     "category_name": String
-                    "expense_type": String
-                    "expense_note": String
-                    "approved": Boolean 
-                    "submission": Date
-                    "expense_cost": Decimal128
+                    "project_name": String
+                    "project_description": String
+                    "is_urgent": String 
+                    "due_date": Date
+                    "status": String
                 }
                 
 
