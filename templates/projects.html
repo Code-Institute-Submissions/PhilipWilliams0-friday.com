@@ -1,14 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for project in projects %}
-{{ project.project_name }}<br>
-{{ project.category_name }}<br>
-{{ project.project_description }}<br>
-{{ project.is_urgent }}<br>
-{{ project.due_date }}<br>
-{{ project.status }}<br>
-
-{% endfor %}
+<ul class="collapsible">
+    {% for project in projects %}
+    <li>
+        <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+            <i class="fas fa-caret-down"></i>
+            <strong>{{ project.project_name }}</strong> : {{ project.due_date }} : {{ project.status }}
+            {% if project.is_urgent == "on" %}
+            <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped" data-position="right"
+                data-tooltip="URGENT!"></i>
+            {% endif %}
+        </div>
+        <div class="collapsible-body">
+            <strong>{{ project.category_name }}</strong>
+            <p>{{ project.project_description }}</p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
 
 {% endblock %}
