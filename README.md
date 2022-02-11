@@ -1,6 +1,6 @@
 <h1 align="center">friday.com</h1>
 
-[View the live project here.](#)
+[View the live project here.](https://friday-projects.herokuapp.com/)
 
 friday.com is a site where users can log tasks for completion with full CRUD functionality, using recently learned Python, PyMongo, Flask and Jinga.
 
@@ -201,7 +201,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 The project was deployed to GitHub Pages using the following steps...
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/PhilipWilliams0/u-expense-project)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/PhilipWilliams0/friday.com)
 2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
     - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
 3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
@@ -227,13 +227,13 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-$ git clone https://github.com/PhilipWilliams0/u-expense-project
+$ git clone https://github.com/PhilipWilliams0/friday.com
 ```
 
 7. Press Enter. Your local clone will be created.
 
 ```
-$ git clone https://github.com/PhilipWilliams0/u-expense-project
+$ git clone https://github.com/PhilipWilliams0/friday.com
 > Cloning into `CI-Clone`...
 > remote: Counting objects: 10, done.
 > remote: Compressing objects: 100% (8/8), done.
@@ -292,19 +292,24 @@ Set up environment variables and flask instance
 
 Within `app.py` import os, Flask and environment variables and create instance of Flask and PyMongo.
 ```python
-    import os
-    from flask import Flask
-  
-    if os.path.exists("env.py"):
-        import env
-    
-    app = Flask(__name__)
+        import os
+        from flask import Flask
+        if os.path.exists("env.py"):
+            import env
 
-    app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-    app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-    app.secret_key = os.environ.get("SECRET_KEY")
 
-    mongo = PyMongo(app)
+        app = Flask(__name__)
+
+
+        @app.route("/")
+        def hello():
+            return "Hello World ... again!"
+
+
+        if __name__ == "__main__":
+            app.run(host=os.environ.get("IP"),
+                    port=int(os.environ.get("PORT")),
+                    debug=True)
 ```
 
 ## Setting up the heroku app
