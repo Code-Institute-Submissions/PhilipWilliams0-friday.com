@@ -8,7 +8,7 @@
     <li>
         <div class="collapsible-header white-text light-blue darken-4 text-shadow">
             <i class="fas fa-caret-down"></i>
-            <strong>{{ project.project_name }}</strong> : {{ project.due_date }} : {{ project.status }}
+            <strong>{{ project.project_name }}</strong> : {{ project.due_date }} : {{ project.status_name }}
             {% if project.is_urgent == "on" %}
             <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped" data-position="right"
                 data-tooltip="URGENT!"></i>
