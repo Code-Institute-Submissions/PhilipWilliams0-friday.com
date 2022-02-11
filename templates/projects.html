@@ -1,14 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for project in projects %}
-{{ project.project_name }}<br>
-{{ project.category_name }}<br>
-{{ project.project_description }}<br>
-{{ project.is_urgent }}<br>
-{{ project.due_date }}<br>
-{{ project.status }}<br>
+<main>
 
-{% endfor %}
+    {% for project in projects %}
+    {{ project.project_name }}<br>
+    {{ project.category_name }}<br>
+    {{ project.project_description }}<br>
+    {{ project.is_urgent }}<br>
+    {{ project.due_date }}<br>
+    {{ project.status }}<br>
+
+    {% endfor %}
+
+</main>
+
 
 {% endblock %}
