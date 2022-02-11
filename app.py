@@ -104,8 +104,24 @@ def logout():
     return redirect(url_for("home"))
 
 
-@app.route("/add_project")
+@app.route("/add_project", methods=["GET", "POST"])
 def add_project():
+
+    if request.method == "POST":
+        is_urgent = "on" if request.form.get("is_urgent") else "off"
+        project = {
+            "category_name": request.form.get("category_name"),
+            "status_name": request.form.get("status_name"),
+            "project_name": request.form.get("project_name"),
+            "project_description": request.form.get("project_description"),
+            "is_urgent": is_urgent,
+            "due_date": request.form.get("due_date"),
+            "created_by": session["user"]
+        }
+        mongo.db.projects.insert_one(project)
+        flash("Project Successfully Added")
+        return redirect(url_for("get_projects"))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     statuses = mongo.db.status.find().sort("status_name", 1)
     return render_template("add_project.html", categories=categories, statuses=statuses)
