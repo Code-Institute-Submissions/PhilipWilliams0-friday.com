@@ -104,6 +104,13 @@ def logout():
     return redirect(url_for("home"))
 
 
+@app.route("/add_project")
+def add_project():
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    statuses = mongo.db.status.find().sort("status_name", 1)
+    return render_template("add_project.html", categories=categories, statuses=statuses)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
