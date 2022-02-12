@@ -6,7 +6,26 @@ friday.com is a site where users can log projects for completion with full CRUD 
 
 <h2 align="center"><img src="#"></h2>
 
+## **CONTENTS** ##
+
+- [UX](#user-experience-(ux))
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Known Bugs](#known-bugs)
+- [Deployment](#deployment)
+- [Content](#content)
+- [Media](#media)
+- [Acknowledgements](#acknowledgements)
+
+
+
 ## User Experience (UX)
+
+-   ### Project goals
+
+
+
 
 -   ### User stories
 
@@ -25,9 +44,8 @@ friday.com is a site where users can log projects for completion with full CRUD 
 
 
     -   #### Frequent User Goals
-        1. As a Frequent User, 
-        2. As a Frequent User, 
-        3. As a Frequent User, 
+        1. As a Frequent User, I want to be able to edit project(s)
+        2. As a Frequent User, I want to see my projects only  
 
 -   ### Design
     -   #### Colour Scheme
@@ -100,16 +118,20 @@ friday.com is a site where users can log projects for completion with full CRUD 
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-    - Bootstrap was used to assist with the responsiveness and styling of the website.
-1. [Hover.css:](https://ianlunn.github.io/Hover/)
-    - Hover.css was used on the Social Media icons in the footer to add the float transition while being hovered over.
-1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
+1. [Flask:](https://flask.palletsprojects.com/en/2.0.x/)
+    - Flask is a web framework. This means flask provides you with tools, libraries and technologies that allow you to build a web application. 
+1. [MongoDB:](https://www.mongodb.com/)
+    - MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.
+1. [Materialize 1.0.0:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+    - Materialize is a modern responsive CSS framework based on Material Design by Google.
+1. [jinja.:](https://jinja.palletsprojects.com/en/3.0.x/)
+    - Jinja is a fast, expressive, extensible templating engine. Special placeholders in the template allow writing code similar to Python syntax. Then the template is passed data to render the final document.
 1. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [jQuery:](https://jquery.com/)
     - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
+1. [EmailJS:](https://www.emailjs.com/docs/tutorial/overview/)
+    - EmailJS is a mail sending platform that directly sends an email without the requirement of code.
 1. [Git](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
@@ -341,3 +363,5 @@ In order to deploy the app via [heroku](https://dashboard.heroku.com/apps), the 
 -   My Mentor for continuous helpful feedback.
 
 -   Tutor support at Code Institute for their support.
+
+[Back to Contents](#contents)
