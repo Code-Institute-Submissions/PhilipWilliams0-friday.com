@@ -2,7 +2,7 @@
 
 [View the live project here.](https://friday-projects.herokuapp.com/)
 
-friday.com is a site where users can log tasks for completion with full CRUD functionality, using recently learned Python, PyMongo, Flask and Jinga.
+friday.com is a site where users can log projects for completion with full CRUD functionality, using recently learned Python, PyMongo, Flask and Jinga.
 
 <h2 align="center"><img src="#"></h2>
 
@@ -15,13 +15,13 @@ friday.com is a site where users can log tasks for completion with full CRUD fun
 
         1. As a First Time Visitor, I want to know about the site. 
         2. As a First Time Visitor, I want to easily create an account. 
-        3. As a First Time Visitor, I want to be able to log a task.
+        3. As a First Time Visitor, I want to be able to log a project.
 
     -   #### Returning Visitor Goals
 
-        1. As a Returning Visitor, I want to find information about my task.
+        1. As a Returning Visitor, I want to find information about my project.
         2. As a Returning Visitor, I want to be able to contact site owner. 
-        3. As a Returning Visitor, I want to be able to edit and delete an task. 
+        3. As a Returning Visitor, I want to be able to edit and delete/complete a project. 
 
 
     -   #### Frequent User Goals
@@ -31,7 +31,7 @@ friday.com is a site where users can log tasks for completion with full CRUD fun
 
 -   ### Design
     -   #### Colour Scheme
-        -   The two main colours used are Code Insititue red, and white.
+        -   The main colours used are black and white.
     -   #### Typography
         -   The Montserrat font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
     -   #### Imagery
@@ -71,17 +71,17 @@ friday.com is a site where users can log tasks for completion with full CRUD fun
                     "project_description": String
                     "is_urgent": String 
                     "due_date": Date
-                    "status": String
+                    "status_name": String
                 }
                 
 
         *   ### Wireframes
 
-            -   Desktop Wireframe - [View]()
+            -   Desktop Wireframe - [View](https://github.com/PhilipWilliams0/friday.com/tree/main/static/wireframes/desktop)
 
-            -   Tablet  Wireframe - [View]()
+            -   Tablet  Wireframe - [View](https://github.com/PhilipWilliams0/friday.com/tree/main/static/wireframes/tablet)
 
-            -   Mobile  Wireframe - [View]()
+            -   Mobile  Wireframe - [View](https://github.com/PhilipWilliams0/friday.com/tree/main/static/wireframes/mobile)
 
 ## Features
 
@@ -114,8 +114,8 @@ friday.com is a site where users can log tasks for completion with full CRUD fun
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git.
-1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
-    - Photoshop was used to create the logo, resizing images and editing photos for the website.
+1. [usplash:](https://unsplash.com/)
+    - Over 2 million free high-resolution images brought to you by the world’s most generous community of photographers.
 1. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
 
@@ -290,28 +290,6 @@ Set up environment variables and flask instance
     - I used [randomkeygen]() to generate my secret key. 
     - To get your mongodb URI, go to your cluster dashboard and hit connect. Select your version of python and copy the string to the clipboard.
 
-Within `app.py` import os, Flask and environment variables and create instance of Flask and PyMongo.
-```python
-        import os
-        from flask import Flask
-        if os.path.exists("env.py"):
-            import env
-
-
-        app = Flask(__name__)
-
-
-        @app.route("/")
-        def hello():
-            return "Hello World ... again!"
-
-
-        if __name__ == "__main__":
-            app.run(host=os.environ.get("IP"),
-                    port=int(os.environ.get("PORT")),
-                    debug=True)
-```
-
 ## Setting up the heroku app
 In order to deploy the app via [heroku](https://dashboard.heroku.com/apps), the following steps must be taken. 
 
@@ -329,7 +307,7 @@ In order to deploy the app via [heroku](https://dashboard.heroku.com/apps), the 
 - Click on the settings tab and then click 'reveal config vars' in order to input the data hidden in `env.py` as follows.
         
         IP                  0.0.0.0
-        MONGO.DBNAME        sustainable_supper_club
+        MONGO.DBNAME        MONGO.DBNAME copied from env.py
         MONGO_URI           MONGO URI copied from env.py
         PORT                5000
         SECRET_KEY          SECRET_KEY copied from env.py
@@ -350,13 +328,13 @@ In order to deploy the app via [heroku](https://dashboard.heroku.com/apps), the 
 
 ### Content
 
--   All content was written by the developer.
+-   All content was written by the developer. With bulk of code used and adpated from Flask Task Manager from Code Insitute.
 
--   Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
+
 
 ### Media
 
--   All Images were created by the developer.
+-   All Images were obtained from Usplash
 
 ### Acknowledgements
 
