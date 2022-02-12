@@ -18,3 +18,13 @@ main {
 .flashes h4 {
     line-height: 2;
 }
+
+/* edit buttons */
+.btn-small {
+    margin: 5px;
+}
+
+.collapsible-header .col strong {
+    margin: 10px;
+    line-height: 42px;
+}
