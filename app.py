@@ -106,7 +106,6 @@ def logout():
 
 @app.route("/add_project", methods=["GET", "POST"])
 def add_project():
-
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
         project = {
@@ -129,6 +128,20 @@ def add_project():
 
 @app.route("/edit_project/<project_id>", methods=["GET", "POST"])
 def edit_project(project_id):
+    if request.method == "POST":
+        is_urgent = "on" if request.form.get("is_urgent") else "off"
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "status_name": request.form.get("status_name"),
+            "project_name": request.form.get("project_name"),
+            "project_description": request.form.get("project_description"),
+            "is_urgent": is_urgent,
+            "due_date": request.form.get("due_date"),
+            "created_by": session["user"]
+        }
+        mongo.db.projects.update({"_id": ObjectId(project_id)}, submit)
+        flash("Project Successfully Updated")
+
     project = mongo.db.projects.find_one({"_id": ObjectId(project_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     statuses = mongo.db.status.find().sort("status_name", 1)
