@@ -8,18 +8,6 @@ friday.com is a site where users can log projects for completion with full CRUD 
 
 ## **CONTENTS** ##
 
-- [UX](#ux)
-- [Features](#features)
-- [Technology Used](#technology-used)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [Credits](#credits)
-- [Contents](#contents)
-- [Media](#media)
-- [Acknowledgements](#acknowledgements)
-
-## **CONTENTS** ##
-
 - [UX](#user-experience-(ux))
 - [Features](#features)
 - [Technologies Used](#technologies-used)
