@@ -2,7 +2,7 @@
 
 [View the live project here.](https://friday-projects.herokuapp.com/)
 
-friday.com is a site where users can log tasks for completion with full CRUD functionality, using recently learned Python, PyMongo, Flask and Jinga.
+friday.com is a site where users can log projects for completion with full CRUD functionality, using recently learned Python, PyMongo, Flask and Jinga.
 
 <h2 align="center"><img src="#"></h2>
 
@@ -15,13 +15,13 @@ friday.com is a site where users can log tasks for completion with full CRUD fun
 
         1. As a First Time Visitor, I want to know about the site. 
         2. As a First Time Visitor, I want to easily create an account. 
-        3. As a First Time Visitor, I want to be able to log a task.
+        3. As a First Time Visitor, I want to be able to log a project.
 
     -   #### Returning Visitor Goals
 
-        1. As a Returning Visitor, I want to find information about my task.
+        1. As a Returning Visitor, I want to find information about my project.
         2. As a Returning Visitor, I want to be able to contact site owner. 
-        3. As a Returning Visitor, I want to be able to edit and delete an task. 
+        3. As a Returning Visitor, I want to be able to edit and delete an project. 
 
 
     -   #### Frequent User Goals
@@ -31,9 +31,9 @@ friday.com is a site where users can log tasks for completion with full CRUD fun
 
 -   ### Design
     -   #### Colour Scheme
-        -   The two main colours used are Code Insititue red, and white.
+        -   The two main colours used are Code Insititue purple, blue, and white.
     -   #### Typography
-        -   The Montserrat font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
+        -   The semi-rounded details of the letters give Lato a feeling of warmth, while the strong structure provides stability and seriousness.
     -   #### Imagery
         -   Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
     -   #### Data Schema
@@ -71,17 +71,17 @@ friday.com is a site where users can log tasks for completion with full CRUD fun
                     "project_description": String
                     "is_urgent": String 
                     "due_date": Date
-                    "status": String
+                    "status_name": String
                 }
                 
 
         *   ### Wireframes
 
-            -   Desktop Wireframe - [View]()
+            -   Desktop Wireframe - [View](https://github.com/PhilipWilliams0/friday.com/tree/main/static/wireframes/desktop)
 
-            -   Tablet  Wireframe - [View]()
+            -   Tablet  Wireframe - [View](https://github.com/PhilipWilliams0/friday.com/tree/main/static/wireframes/tablet)
 
-            -   Mobile  Wireframe - [View]()
+            -   Mobile  Wireframe - [View](https://github.com/PhilipWilliams0/friday.com/tree/main/static/wireframes/mobile)
 
 ## Features
 
@@ -102,10 +102,6 @@ friday.com is a site where users can log tasks for completion with full CRUD fun
 
 1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
-1. [Hover.css:](https://ianlunn.github.io/Hover/)
-    - Hover.css was used on the Social Media icons in the footer to add the float transition while being hovered over.
-1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
 1. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [jQuery:](https://jquery.com/)
@@ -266,12 +262,12 @@ Setup app
     ```
 
 - Create gitignore file using the terminal to keep `env.py `from being pushed to github
-    ```python
+    ```
     touch env.py
     ```
 
 - Within the gitignore file add `env.py` and `__pycache__/`.
-    ```python
+    ```
     env.py
     __pycache__/
     ```
@@ -279,7 +275,7 @@ Setup app
 Set up environment variables and flask instance
 - Within `env.py` add the following environment variables:
 
-    ```python
+    ```
     os.environ.setdefault("IP", "0.0.0.0")
     os.environ.setdefault("PORT", "5000")
     os.environ.setdefault("SECRET_KEY", "YOUR SECRET KEY")
@@ -289,28 +285,6 @@ Set up environment variables and flask instance
 
     - I used [randomkeygen]() to generate my secret key. 
     - To get your mongodb URI, go to your cluster dashboard and hit connect. Select your version of python and copy the string to the clipboard.
-
-Within `app.py` import os, Flask and environment variables and create instance of Flask and PyMongo.
-```python
-        import os
-        from flask import Flask
-        if os.path.exists("env.py"):
-            import env
-
-
-        app = Flask(__name__)
-
-
-        @app.route("/")
-        def hello():
-            return "Hello World ... again!"
-
-
-        if __name__ == "__main__":
-            app.run(host=os.environ.get("IP"),
-                    port=int(os.environ.get("PORT")),
-                    debug=True)
-```
 
 ## Setting up the heroku app
 In order to deploy the app via [heroku](https://dashboard.heroku.com/apps), the following steps must be taken. 
@@ -350,13 +324,11 @@ In order to deploy the app via [heroku](https://dashboard.heroku.com/apps), the 
 
 ### Content
 
--   All content was written by the developer.
-
--   Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
+-   All content was written by the developer with bulk of the CRUD structure used from Task Manager from Code institiute and adapted.
 
 ### Media
 
--   All Images were created by the developer.
+-   All Images were obtained from usplash. 
 
 ### Acknowledgements
 
