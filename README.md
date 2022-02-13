@@ -2,14 +2,25 @@
 
 [View the live project here.](https://friday-projects.herokuapp.com/)
 
-friday.com is a site where users can log projects for completion with full CRUD functionality, using recently learned Python, PyMongo, Flask and Jinga.
+friday.com is a site where users can log projects for completion with full CRUD functionality, using recently learned Python and Flask.  
 
-<h2 align="center"><img src="#"></h2>
+<h2 align="center"><img src="https://github.com/PhilipWilliams0/friday.com/blob/main/static/img/responsive.png"></h2>
+
+## **CONTENTS** ##
+
+- [UX](#ux)
+- [Features](#features)
+- [Technology Used](#technology-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Contents](#contents)
+- [Media](#media)
+- [Acknowledgements](#acknowledgements)
 
 ## User Experience (UX)
 
 -   ### User stories
-
 
     -   #### First Time Visitor Goals
 
@@ -21,13 +32,11 @@ friday.com is a site where users can log projects for completion with full CRUD 
 
         1. As a Returning Visitor, I want to find information about my project.
         2. As a Returning Visitor, I want to be able to contact site owner. 
-        3. As a Returning Visitor, I want to be able to edit and delete an project. 
+        3. As a Returning Visitor, I want to be able to edit or delete an project. 
 
 
     -   #### Frequent User Goals
-        1. As a Frequent User, 
-        2. As a Frequent User, 
-        3. As a Frequent User, 
+        1. As a Frequent User, I want to able to change the status. 
 
 -   ### Design
     -   #### Colour Scheme
@@ -100,8 +109,12 @@ friday.com is a site where users can log projects for completion with full CRUD 
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-    - Bootstrap was used to assist with the responsiveness and styling of the website.
+1. [Flask:](https://flask.palletsprojects.com/en/2.0.x/)
+    - Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
+1. [MongoDB:](https://www.mongodb.com/)
+    - MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.
+1. [Materialize 1.0.0:](https://materializecss.com/)
+    - Materialize is a UI component library created with CSS, JavaScript, and HTML. Materialize UI components help in constructing attractive, consistent, and functional web pages and web apps, while adhering to modern web design principles such as browser portability, device independence, and graceful degradation.
 1. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [jQuery:](https://jquery.com/)
@@ -110,10 +123,12 @@ friday.com is a site where users can log projects for completion with full CRUD 
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git.
-1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
-    - Photoshop was used to create the logo, resizing images and editing photos for the website.
+1. [Heroku:](https://www.heroku.com)
+    - Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 1. [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
+    - Balsamiq was used to create the [wireframes](https://github.com/PhilipWilliams0/friday.com/tree/main/static/wireframes) during the design process.
+1. [EmailJS:](www.emailjs.com)
+    - EmailJS helps to send emails using client-side technologies only. No server is required – just connect EmailJS to one of the supported email services, create an email template, and use our Javascript library to trigger an email.
 
 ## Testing
 
@@ -230,11 +245,13 @@ $ git clone https://github.com/PhilipWilliams0/friday.com
 
 ```
 $ git clone https://github.com/PhilipWilliams0/friday.com
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
+> Cloning into 'friday.com'...
+> remote: Enumerating objects: 287, done.
+> remote: Counting objects: 100% (287/287), done.
+> remote: Compressing objects: 100% (201/201), done.
+> remote: Total 287 (delta 146), reused 206 (delta 67), pack-reused 0
+> Receiving objects: 100% (287/287), 4.68 MiB | 5.25 MiB/s, done.
+> Resolving deltas: 100% (146/146), done.
 ```
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
@@ -303,7 +320,7 @@ In order to deploy the app via [heroku](https://dashboard.heroku.com/apps), the 
 - Click on the settings tab and then click 'reveal config vars' in order to input the data hidden in `env.py` as follows.
         
         IP                  0.0.0.0
-        MONGO.DBNAME        sustainable_supper_club
+        MONGO.DBNAME        friday-project
         MONGO_URI           MONGO URI copied from env.py
         PORT                5000
         SECRET_KEY          SECRET_KEY copied from env.py
@@ -316,7 +333,7 @@ In order to deploy the app via [heroku](https://dashboard.heroku.com/apps), the 
 
 ### Code
 
--   The full-screen hero image code came from this [StackOverflow post](https://stackoverflow.com)
+-   The full-screen hero image code idea came from [udemy](https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/)
 
 -   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
