@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    <h2>Something has gone wrong</h2>
+    <p class="intro-text">Please use the button below to go back to the homepage or use the links above.</p>
+    <div class="col s12 center align">
+        <a href="{{ url_for('home') }}" class="btn waves-effect waves-light red darken-4 center-align">
+            <i class="fas fa-home"></i>Home
+        </a>
+    </div>
+</div>
+
+{% endblock %}
