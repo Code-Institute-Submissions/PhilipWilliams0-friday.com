@@ -53,3 +53,9 @@ main {
 .main-header .showcase {
     padding-top: 110px;
 }
+
+@media (max-width: 600px) {
+    .main-header {
+        height: 50vh;
+    }
+}
