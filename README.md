@@ -23,9 +23,7 @@ friday.com is a site where users can log projects for completion with full CRUD 
 ## User Experience (UX)
 
 -   ### Project goals
-
-
-
+This site is aimed at teams who want a free resource that will help them in their workday. It is also a site where users can share their projects with other departments. 
 
 -   ### User stories
 
@@ -37,13 +35,14 @@ friday.com is a site where users can log projects for completion with full CRUD 
 
     -   #### Returning Visitor Goals
 
-        1. As a Returning Visitor, I want to find information about my project.
+        1. As a Returning Visitor, I want to find information about projects.
         2. As a Returning Visitor, I want to be able to contact site owner. 
         3. As a Returning Visitor, I want to be able to edit or delete an project. 
 
 
     -   #### Frequent User Goals
-        1. As a Frequent User, I want to able to change the status. 
+        1. As a Frequent User, I want to able to change the status.
+        1. As a Frequent User, I want to able to see my own projects. 
 
 -   ### Design
     -   #### Colour Scheme
@@ -103,7 +102,7 @@ friday.com is a site where users can log projects for completion with full CRUD 
 
 -   Responsive on all device sizes
 
--   Interactive elements
+-   Interactive elements which also display links on weather the user is signed in or anonymous. 
 
 ## Technologies Used
 
@@ -150,23 +149,16 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 -   #### First Time Visitor Goals
 
-    1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
-
-        1. Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a Hero Image with Text and a "Learn More" Call to action button.
-        2. The main points are made immediately with the hero image
-        3. The user has two options, click the call to action buttons or scroll down, both of which will lead to the same place, to learn more about the organisation.
-
-    2. As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
-
-        1. The site has been designed to be fluid and never to entrap the user. At the top of each page there is a clean navigation bar, each link describes what the page they will end up at clearly.
-        2. At the bottom of the first 3 pages there is a redirection call to action to ensure the user always has somewhere to go and doesn't feel trapped as they get to the bottom of the page.
-        3. On the Contact Us Page, after a form response is submitted, the page refreshes and the user is brought to the top of the page where the navigation bar is.
-
-    3. As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their following on social media to determine how trusted and known they are.
-        1. Once the new visitor has read the About Us and What We Do text, they will notice the Why We are Loved So Much section.
-        2. The user can also scroll to the bottom of any page on the site to locate social media links in the footer.
-        3. At the bottom of the Contact Us page, the user is told underneath the form, that alternatively they can contact the organisation on social media which highlights the links to them.
-
+    1. As a First Time Visitor, I want to know about the site. 
+        <h2 align="center"><img src="static/testing/user-stories/Screenshot 2022-02-15 at 09.48.20.png"></h2>
+        1. 
+    2. As a First Time Visitor, I want to easily create an account. 
+        
+        1. 
+    3. As a First Time Visitor, I want to be able to log a project.
+        
+        1. 
+       
 -   #### Returning Visitor Goals
 
     1. As a Returning Visitor, I want to find the new programming challenges or hackathons.
@@ -344,9 +336,6 @@ In order to deploy the app via [heroku](https://dashboard.heroku.com/apps), the 
 
 -   The full-screen hero image code idea came from [udemy](https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/)
 
--   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
-
--   [MDN Web Docs](https://developer.mozilla.org/) : For Pattern Validation code. Code was modified to better fit my needs and to match an Irish phone number layout to ensure correct validation. Tutorial Found [Here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel#Pattern_validation)
 
 ### Content
 
