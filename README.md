@@ -1,10 +1,18 @@
 <h1 align="center">friday.com</h1>
 
 [View the live project here.](https://friday-projects.herokuapp.com/)
+### User Testing Creditals
+#### Admin User 
+    username = admin
+    password = basketball13
+#### Basic User 
+    username = philip
+    password = basketball
 
 friday.com is a site where users can log projects for completion with full CRUD functionality, using recently learned Python and Flask.  
 
-<h2 align="center"><img src="https://github.com/PhilipWilliams0/friday.com/blob/main/static/img/responsive.png"></h2>
+
+<h2 align="center"><img src="static/img/responsive.png"></h2>
 
 ## **CONTENTS** ##
 
@@ -46,15 +54,15 @@ This site is aimed at teams who want a free resource that will help them in thei
 
 -   ### Design
     -   #### Colour Scheme
-        -   The two main colours used are Code Insititue purple, blue, and white.
+        -   The two main colours used are grey/black. 
     -   #### Typography
         -   The semi-rounded details of the letters give Lato a feeling of warmth, while the strong structure provides stability and seriousness.
     -   #### Imagery
-        -   Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
+        -   The extensive background hero image is designed to be striking and catch the user's attention. It also brings a modern look.
     -   #### Data Schema
 
         -   Using MongoDB provides many benefits in the development of this app. Its flexible schema makes it easy to evolve and store data in a way that is easy to work with. MongoDB is also built to scale up quickly and supports all the main features of modern databases such as transactions.
-
+        
         - Categories
 
                 {   
@@ -99,10 +107,52 @@ This site is aimed at teams who want a free resource that will help them in thei
             -   Mobile  Wireframe - [View](https://github.com/PhilipWilliams0/friday.com/tree/main/static/wireframes/mobile)
 
 ## Features
+### Existing:
 
--   Responsive on all device sizes
+-   Responsive on all device sizes.
+-   Hero image with text, call to action homepage.
+-   Fixed and transparent navbar on every page.
+-   Showing a footer on every page.
+-   Multiply social contacts
+-   Interactive elements also display links on whether the user is signed in or anonymous.
 
--   Interactive elements which also display links on weather the user is signed in or anonymous. 
+#### Projects Page
+-   Header with page location.
+-   Search functionality for all projects using category name, project name and project description.
+-   Reset button to exit search function.
+-   Collapsible sections with crucial info in the header. 
+-   Indicator stating if the project is urgent.
+
+#### Register Page
+-   Header with page location
+-   Enables the user to register or, if already registered, use the link to access the sign-in page. 
+-   Button to register
+
+#### Login Page
+-   Header with page location
+-   Enables the user to log in or, if not registered, use the link to access the registration page. 
+-   Button to log in
+
+#### Profile Page
+-   Header with page location
+-   User is greeted with a welcome message.
+-   Collapsible sections with crucial info in the header. 
+-   If a user created any project, those projects only would be listed in this section. 
+-   Only created users will have edit/delete functionality.
+
+#### New Product Page
+-   Header with page location
+-   User is presented with a clean form to enter all information for a new project. 
+-   submit button
+-   Message confirm project creation. 
+-   Redirect to the all projects page. 
+
+#### Log Out 
+-   User has redirected all projects page with a message confirming logged out.
+
+### To Implement
+-   Could use email like emailjs or flask-mail rather then being transparent via social media.
+-      
 
 ## Technologies Used
 
@@ -125,8 +175,6 @@ This site is aimed at teams who want a free resource that will help them in thei
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [jQuery:](https://jquery.com/)
     - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
-1. [EmailJS:](https://www.emailjs.com/docs/tutorial/overview/)
-    - EmailJS is a mail sending platform that directly sends an email without the requirement of code.
 1. [Git](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
@@ -135,8 +183,6 @@ This site is aimed at teams who want a free resource that will help them in thei
     - Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 1. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the [wireframes](https://github.com/PhilipWilliams0/friday.com/tree/main/static/wireframes) during the design process.
-1. [EmailJS:](www.emailjs.com)
-    - EmailJS helps to send emails using client-side technologies only. No server is required – just connect EmailJS to one of the supported email services, create an email template, and use our Javascript library to trigger an email.
 
 ## Testing
 
@@ -161,38 +207,17 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
        
 -   #### Returning Visitor Goals
 
-    1. As a Returning Visitor, I want to find the new programming challenges or hackathons.
+    1. As a Returning Visitor, I want to find information about projects.
 
-        1. These are clearly shown in the banner message.
-        2. They will be directed to a page with another hero image and call to action.
+    2. As a Returning Visitor, I want to be able to contact site owner. 
 
-    2. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-
-        1. The navigation bar clearly highlights the "Contact Us" Page.
-        2. Here they can fill out the form on the page or are told that alternatively they can message the organisation on social media.
-        3. The footer contains links to the organisations Facebook, Twitter and Instagram page as well as the organization's email.
-        4. Whichever link they click, it will be open up in a new tab to ensure the user can easily get back to the website.
-        5. The email button is set up to automatically open up your email app and autofill there email address in the "To" section.
-
-    3. As a Returning Visitor, I want to find the Facebook Group link so that I can join and interact with others in the community.
-        1. The Facebook Page can be found at the footer of every page and will open a new tab for the user and more information can be found on the Facebook page.
-        2. Alternatively, the user can scroll to the bottom of the Home page to find the Facebook Group redirect card and can easily join by clicking the "Join Now!" button which like any external link, will open in a new tab to ensure they can get back to the website easily.
-        3. If the user is on the "Our Favourites" page they will also be greeted with a call to action button to invite the user to the Facebook group. The user is incentivized as they are told there is a weekly favourite product posted in the group.
+    3. As a Returning Visitor, I want to be able to edit or delete an project. 
 
 -   #### Frequent User Goals
 
-    1. As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
+    1. As a Frequent User, I want to able to change the status.
 
-        1. The user would already be comfortable with the website layout and can easily click the banner message.
-
-    2. As a Frequent User, I want to check to see if there are any new blog posts.
-
-        1. The user would already be comfortable with the website layout and can easily click the blog link
-
-    3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
-        1. At the bottom of every page their is a footer which content is consistent throughout all pages.
-        2. To the right hand side of the footer the user can see "Subscribe to our Newsletter" and are prompted to Enter their email address.
-        3. There is a "Submit" button to the right hand side of the input field which is located close to the field and can easily be distinguished.
+    1. As a Frequent User, I want to able to see my own projects. 
 
 ### Further Testing
 
