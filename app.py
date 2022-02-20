@@ -98,7 +98,11 @@ def profile(username):
         {"username": session["user"]})["username"]
     projects = list(mongo.db.projects.find(
         {"created_by": session["user"]}))
-    return render_template("profile.html", username=username, projects=projects)
+    return render_template(
+        "profile.html",
+        username=username,
+        projects=projects
+        )
 
     return redirect(url_for("login"))
 
@@ -130,7 +134,11 @@ def add_project():
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     statuses = mongo.db.status.find().sort("status_name", 1)
-    return render_template("add_project.html", categories=categories, statuses=statuses)
+    return render_template(
+        "add_project.html",
+        categories=categories,
+        statuses=statuses
+        )
 
 
 @app.route("/edit_project/<project_id>", methods=["GET", "POST"])
@@ -152,7 +160,12 @@ def edit_project(project_id):
     project = mongo.db.projects.find_one({"_id": ObjectId(project_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     statuses = mongo.db.status.find().sort("status_name", 1)
-    return render_template("edit_project.html", project=project, categories=categories, statuses=statuses)
+    return render_template(
+        "edit_project.html",
+        project=project,
+        categories=categories,
+        statuses=statuses
+        )
 
 
 @app.route("/delete_project/<project_id>")
