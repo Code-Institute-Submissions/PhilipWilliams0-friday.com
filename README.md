@@ -197,8 +197,8 @@ The W3C Markup Validator W3C CSS Validator Services, including jshint and PEP8, 
 -   [PEP8 Validator](http://pep8online.com/) - [Results](https://github.com/PhilipWilliams0/friday.com/blob/main/static/img/testing/PEP8.png)
     - No Errors
 ### Testing User Stories from User Experience (UX) Section
-- 
-    <details><summary><b>Click here for First Time Visitor Goals</b></summary>
+ 
+- #### First Time Visitor Goals
     1. As a First Time Visitor, I want to know about the site. 
         <h2 align="center"><img src="static/img/testing/Homepage.png"></h2>
         1. Landing on the website tells you right away what the website does and has a button to see all open projects
@@ -208,8 +208,8 @@ The W3C Markup Validator W3C CSS Validator Services, including jshint and PEP8, 
     3. As a First Time Visitor, I want to be able to log a project.
         <h2 align="center"><img src="static/img/testing/add_project.png"></h2>
         1. In the navigation bar, you have a link for a new project where you are presented with a form to fill in with input controls. Once submitted, taken to an all projects page with a successful message. 
--  
-    <details><summary><b>Click here for Returning Visitor Goals</b></summary>
+ 
+- #### Returning Visitor Goals
     1. As a Returning Visitor, I want to find information about projects.
         <h2 align="center"><img src="static/img/testing/all_projects.png"></h2>
         1. As a returning user, you can select log in from the navbar. Which will open a login form with controls to all details are correct. Once logged in, they are taken to the profile page with a welcome message. 
@@ -220,8 +220,8 @@ The W3C Markup Validator W3C CSS Validator Services, including jshint and PEP8, 
         <h2 align="center"><img src="static/img/testing/edit_project.png"></h2>
         3. The user has to be logged in and then from either the profile page or all projects, as long as the creator can edit projects using the edit button.
         4. The user has to be logged in and then from either the profile page or all projects, as long as the creator can delete projects using the delete button.
--   
-    <details><summary><b>Click here for Frequent User Goals</b></summary>
+   
+- #### Frequent User Goals
     1. As a Frequent User, I want to able to change the status.
         <h2 align="center"><img src="static/img/testing/profile.png"></h2>
         1. The user has to be logged in and then from either the profile page or all projects, as long as the creator can edit projects using the edit button.
